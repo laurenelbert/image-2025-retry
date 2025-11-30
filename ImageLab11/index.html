@@ -13,17 +13,26 @@
       <a-asset-item id="asteroidMTL" src="assets/Rocky_Asteroid_5.mtl"></a-asset-item>
       <img id="earthTexture" src="assets/AdobeStock_364910470.jpeg">
       <img id="moonTexture" src="assets/AdobeStock_360949008.jpeg">
+      <a-asset-item id="planetOBJ" src="assets/Stylized_Planets.obj"></a-asset-item>
+      <a-asset-item id="planetMTL" src="assets/Stylized_Planets.mtl"></a-asset-item>
+      <img id="saturnTexture" src="assets/Textures/Saturn_4K/Saturn2_Saturn_BaseColor.png">
+
     </a-assets>
 
 
     <!-- space background -->
     <a-sky color="#000000"></a-sky>
 
-    <!-- planets -->
     <!-- Earth -->
     <a-sphere position="-150 2 -6" radius="100" material="src: #earthTexture"
       animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
     </a-sphere>
+
+    <!-- Stylized planet -->
+    <a-entity obj-model="obj: #planetOBJ" material="src: #saturnTexture" position="350 -150 -400" scale="150 150 150"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+    </a-entity>
+
 
     <!-- asteroids -->
     <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="300 0 0" scale="15 15 15"></a-entity>
@@ -61,14 +70,12 @@
     <a-cylinder position="0 5 0" radius="6" height="40" color="white">
     </a-cylinder>
 
-    <!-- Nose cone -->
     <a-cone position="0 30 0" radius-bottom="7" radius-top="0" height="15" color="red">
     </a-cone>
 
     <a-cylinder position="0 -15 0" radius="4" height="8" color="orange">
     </a-cylinder>
 
-    <!-- side box -->
     <a-box position="6 -5 0" depth="2" height="10" width="4" color="red">
     </a-box>
 
@@ -81,7 +88,6 @@
     <a-box position="0 -5 -6" depth="4" height="10" width="2" color="red">
     </a-box>
 
-    <!-- Window -->
     <a-sphere position="0 10 6.2" radius="4.5" color="blue">
     </a-sphere>
 

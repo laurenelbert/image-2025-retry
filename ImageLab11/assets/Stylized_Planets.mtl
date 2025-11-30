@@ -1,0 +1,44 @@
+# Blender MTL File: Stylized_Planets.mtl
+# Cleaned for A-Frame / WebGL
+
+####################################
+# MOON MATERIAL
+####################################
+newmtl MOON
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+illum 2
+d 1.000000
+
+map_Kd Textures/Moon_4K/Saturn2_Saturn_BaseColor.png
+
+
+####################################
+# RINGS MATERIAL
+####################################
+newmtl Rings
+Ns 100.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+illum 2
+d 1.000000
+
+map_Kd Textures/Saturn_4K/Saturn2_Rings_BaseColor.png
+map_Bump Textures/Saturn_4K/Saturn2_Rings_Normal.png
+
+
+####################################
+# SATURN PLANET MATERIAL
+####################################
+newmtl Saturn
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+illum 2
+d 1.000000
+
+map_Kd Textures/Saturn_4K/Saturn2_Saturn_BaseColor.png
