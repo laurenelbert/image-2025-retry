@@ -2,23 +2,95 @@
 <html>
 
 <head>
-  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene>
+    <!-- assets -->
     <a-assets>
       <a-asset-item id="asteroidOBJ" src="assets/Rocky_Asteroid_5.obj"></a-asset-item>
-      <a-asset-item id="asteroidMtl" src="assets/Rocky_Asteroid_5.mtl"></a-asset-item>
+      <a-asset-item id="asteroidMTL" src="assets/Rocky_Asteroid_5.mtl"></a-asset-item>
+      <img id="earthTexture" src="assets/AdobeStock_364910470.jpeg">
+      <img id="moonTexture" src="assets/AdobeStock_360949008.jpeg">
     </a-assets>
 
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-    <a-sky color="#FFFFFF"></a-sky>
 
-    <a-obj-model src="#asteroidOBJ" color="pink"></a-obj-model>
-    <!-- <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMtl;" scale="1 1 1" position="0 0 0"></a-entity> -->
+    <!-- space background -->
+    <a-sky color="#000000"></a-sky>
 
+    <!-- planets -->
+    <!-- Earth -->
+    <a-sphere position="-150 2 -6" radius="100" material="src: #earthTexture"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+    </a-sphere>
+
+    <!-- asteroids -->
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="300 0 0" scale="15 15 15"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="250 60 120" scale="12 12 12"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="180 -40 260" scale="20 20 20"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="0 80 300" scale="18 18 18"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="-150 -70 270" scale="25 25 25"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="-260 50 150" scale="14 14 14"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="-320 0 0" scale="22 22 22"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="-250 -60 -160" scale="13 13 13"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="-120 90 -300" scale="24 24 24"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="0 -80 -320" scale="16 16 16"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="200 70 -260" scale="19 19 19"></a-entity>
+
+    <a-entity obj-model="obj: #asteroidOBJ; mtl: #asteroidMTL" position="300 -50 -140" scale="11 11 11"></a-entity>
+
+    </a-entity>
+
+
+
+
+    <!-- moon & ship -->
+    <a-sphere position="50 50 -25" radius="25" material="src: #moonTexture"></a-sphere>
+
+    <a-cylinder position="0 5 0" radius="6" height="40" color="white">
+    </a-cylinder>
+
+    <!-- Nose cone -->
+    <a-cone position="0 30 0" radius-bottom="7" radius-top="0" height="15" color="red">
+    </a-cone>
+
+    <a-cylinder position="0 -15 0" radius="4" height="8" color="orange">
+    </a-cylinder>
+
+    <!-- side box -->
+    <a-box position="6 -5 0" depth="2" height="10" width="4" color="red">
+    </a-box>
+
+    <a-box position="-6 -5 0" depth="2" height="10" width="4" color="red">
+    </a-box>
+
+    <a-box position="0 -5 6" depth="4" height="10" width="2" color="red">
+    </a-box>
+
+    <a-box position="0 -5 -6" depth="4" height="10" width="2" color="red">
+    </a-box>
+
+    <!-- Window -->
+    <a-sphere position="0 10 6.2" radius="4.5" color="blue">
+    </a-sphere>
+
+
+
+
+    </a-entity>
   </a-scene>
+
 </body>
 
 </html>
