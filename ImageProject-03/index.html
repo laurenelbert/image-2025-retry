@@ -16,12 +16,15 @@
       <a-asset-item id="planetOBJ" src="assets/Stylized_Planets.obj"></a-asset-item>
       <a-asset-item id="planetMTL" src="assets/Stylized_Planets.mtl"></a-asset-item>
       <img id="saturnTexture" src="assets/Textures/Saturn_4K/Saturn2_Saturn_BaseColor.png">
+      <img id="spaceBG" src="assets/AdobeStock_711683176.jpeg">
+
 
     </a-assets>
 
 
     <!-- space background -->
-    <a-sky color="#000000"></a-sky>
+    <a-sky src="#spaceBG" rotation="0 -90 0"></a-sky>
+
 
     <!-- Earth -->
     <a-sphere position="-150 2 -6" radius="100" material="src: #earthTexture"
